@@ -16,13 +16,18 @@ Vagrant box for meteor development preconfigured with:
 5. Vagrant up - The first time you vagrant up, vagrant will download the precise64 base box from hashicorp servers and configure it using the shell script in the /vmsetup folder.
 
 ```bash
+# Start up the box
 vagrant up
+
+# SSH into the box
 vagrant ssh
 
-# Create the app
+# Create the meteor app
 cd /vagrant
 meteor create myapp --example leaderboard
 cd /vagrant/myapp
+
+# Run the app
 MONGO_URL=mongodb://localhost:27017/myapp meteor run
 ```
 
@@ -36,9 +41,7 @@ At this time we cannot just run 'meteor' to run our meteor app. If you do, you w
 * Can't start Mongo server.
 * MongoDB cannot open or obtain a lock on a file
 
-I believe this is due of the shared folder that vagrant setup between the host and guest.
-
-Alternatively we use our local mongodb or any valid mongo url to start our app as follow:
+Alternatively we use our local mongodb or any valid mongo url and start our app as follow:
 
 ```bash
 MONGO_URL=mongodb://localhost:27017/myapp meteor run
