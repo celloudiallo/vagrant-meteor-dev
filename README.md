@@ -19,15 +19,17 @@ Vagrant box for meteor development preconfigured with:
 <h4>MongoDB error</h4>
 
 At this time we cannot just run 'meteor' to run our meteor app. If you do, you will face an error as the one below:
-    .=> Started proxy.
-    .Unexpected mongo exit code 45. Restarting.
-    .Unexpected mongo exit code 45. Restarting.
-    .Unexpected mongo exit code 45. Restarting.
-    .Can't start Mongo server.
-    .MongoDB cannot open or obtain a lock on a file
+* => Started proxy.
+* Unexpected mongo exit code 45. Restarting.
+* Unexpected mongo exit code 45. Restarting.
+* Unexpected mongo exit code 45. Restarting.
+* Can't start Mongo server.
+* MongoDB cannot open or obtain a lock on a file
 
 I believe this is due of the shared folder that vagrant setup between the host and guest.
 
 Alternatively we use our local mongodb or any valid mongo url to start our app as follow:
 
+```bash
 MONGO_URL=mongodb://localhost:27017/myapp meteor run
+```
