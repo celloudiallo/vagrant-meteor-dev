@@ -10,7 +10,7 @@ Vagrant box for meteor development preconfigured with:
 <h3>Setup</h3>
 
 1. Download Vagrant from here https://www.vagrantup.com/downloads.html
-2. Install Virtual Box from here https://www.virtualbox.org/wiki/Downloads, if you wish to use other vagrant providers you may do, please refer to vagrant docs.
+2. Install Virtual Box from here https://www.virtualbox.org/wiki/Downloads, if you wish to use other vagrant providers you may do so, please refer to the vagrant docs.
 3. cd to/your/dev/folder
 4. Clone this repo to your local: git clone https://github.com/celloudiallo/vagrant-meteor-dev.git
 5. Vagrant up - The first time you vagrant up, vagrant will download the precise64 base box from hashicorp servers and configure it using the shell script in the /vmsetup folder.
