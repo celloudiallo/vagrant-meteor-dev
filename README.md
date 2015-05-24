@@ -14,7 +14,17 @@ Vagrant box for meteor development preconfigured with:
 3. cd to/your/dev/folder
 4. Clone this repo to your local: git clone https://github.com/celloudiallo/vagrant-meteor-dev.git
 5. Vagrant up - The first time you vagrant up, vagrant will download the precise64 base box from hashicorp servers and configure it using the shell script in the /vmsetup folder.
-6. Vagrant ssh - end you are in your dev box all set.
+
+```bash
+vagrant up
+vagrant ssh
+
+# Create the app
+cd /vagrant
+meteor create myapp --example leaderboard
+cd /vagrant/myapp
+MONGO_URL=mongodb://localhost:27017/myapp meteor run
+```
 
 <h4>MongoDB error</h4>
 
